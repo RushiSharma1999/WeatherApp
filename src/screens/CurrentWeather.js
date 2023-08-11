@@ -10,7 +10,7 @@ const CurrentWeather = ({ weatherData }) => {
     weather,
   } = weatherData;
 
-  const weatherCondition = weather[0].main;
+  const weatherCondition = weather[0]?.main;
 
   const {
     wrapper,
@@ -38,7 +38,7 @@ const CurrentWeather = ({ weatherData }) => {
           color="white"
         />
         <Text style={tempStyles}>{`${temp}°`}</Text>
-        <Text style={feels}>{`Feels like ${feels_like}`}</Text>
+        <Text style={feels}>{`Feels like ${feels_like}°ß`}</Text>
         <RowText
           messageOne={`High: ${temp_max}° `}
           messageTwo={`Low: ${temp_min}°`}
